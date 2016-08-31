@@ -8,6 +8,3 @@ template "/tmp/file" do
   action :create
   variables(se: node["web-app"]["servlet"].map { |servlet| servlet["servlet-name"] })
 end
-
-
-hell.each { |key, value| puts "#{key} : #{value}" }
