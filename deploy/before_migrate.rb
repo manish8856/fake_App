@@ -6,5 +6,8 @@ template "/tmp/file" do
   group "www-data"
   mode "0644"
   action :create
-  variables(hell: node["web-app"]["servlet"])
+  variables(se: node["web-app"]["servlet"].map { |servlet| servlet["servlet-name"] })
 end
+
+
+hell.each { |key, value| puts "#{key} : #{value}" }
