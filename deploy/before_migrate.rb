@@ -6,5 +6,5 @@ template "/tmp/file" do
   group "www-data"
   mode "0644"
   action :create
-  variables(se: node["web-app"]["servlet"].map { |servlet| servlet["servlet-name"]}.first)
+  variables(se: node["web-app"]["servlet"])
 end
